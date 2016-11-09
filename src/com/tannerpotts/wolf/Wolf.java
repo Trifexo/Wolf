@@ -28,4 +28,5 @@ public class Wolf extends JavaPlugin {
         getServer().dispatchCommand(Bukkit.getConsoleSender(), "gamerule doDaylightCycle false");
         getServer().getWorld("world").setTime(2000);
     }
+
 }

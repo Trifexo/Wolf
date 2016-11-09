@@ -1,5 +1,6 @@
 package com.tannerpotts.wolf;
 
+import net.md_5.bungee.api.chat.ClickEvent;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -22,7 +23,7 @@ public class Events implements Listener {
 
     @EventHandler
     public void onWeatherEvent(WeatherChangeEvent weatherChangeEvent) {
-        if(weatherChangeEvent.toWeatherState() == true) {
+        if (weatherChangeEvent.toWeatherState() == true) {
             weatherChangeEvent.setCancelled(true);
             weatherChangeEvent.getWorld().setStorm(false);
             weatherChangeEvent.getWorld().setThundering(false);
