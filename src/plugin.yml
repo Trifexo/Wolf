@@ -1,0 +1,6 @@
+name: Wolf
+version: 0.0.1
+description: Wolf Server Plugin.
+author: Trifexo
+authors: [CPBit]
+main: com.tannerpotts.wolf.Wolf
