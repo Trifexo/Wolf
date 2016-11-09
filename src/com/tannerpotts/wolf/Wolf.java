@@ -1,5 +1,6 @@
 package com.tannerpotts.wolf;
 
+import org.bukkit.Bukkit;
 import org.bukkit.plugin.java.JavaPlugin;
 
 /**
@@ -20,5 +21,11 @@ public class Wolf extends JavaPlugin {
     public void onEnable() {
         super.onEnable();
         getServer().getPluginManager().registerEvents(eventHandler, this);
+
+        /*
+         * Time always day
+         */
+        getServer().dispatchCommand(Bukkit.getConsoleSender(), "gamerule doDaylightCycle false");
+        getServer().getWorld("world").setTime(2000);
     }
 }
