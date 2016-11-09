@@ -6,7 +6,9 @@ import org.bukkit.plugin.java.JavaPlugin;
  * Created by Trifexo on 11/8/2016.
  */
 
-public class Wolf extends JavaPlugin{
+public class Wolf extends JavaPlugin {
+
+    Events eventHandler = new Events();
 
     @Override
     public void onDisable() {
@@ -17,6 +19,6 @@ public class Wolf extends JavaPlugin{
     @Override
     public void onEnable() {
         super.onEnable();
-        getLogger().info("Wolf Starting!");
+        getServer().getPluginManager().registerEvents(eventHandler, this);
     }
 }
